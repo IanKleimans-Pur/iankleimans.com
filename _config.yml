@@ -1,3 +1,10 @@
 theme: jekyll-theme-minimal
 title: Ian Kleimans
 description: Welcome to my personal website
+
+plugins:
+  - jekyll-seo-tag
+
+header_pages:
+  - index.md
+  - resume.html
