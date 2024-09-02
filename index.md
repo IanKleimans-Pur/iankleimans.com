@@ -5,138 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ian Kleimans - Industrial Engineering Student</title>
     <style>
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --text-color: #333;
-            --background-color: #f4f4f4;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-        }
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            overflow: hidden;
-            padding: 0 2rem;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
         header {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-bottom: 2rem;
         }
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        h1, h2 {
+            color: #2c3e50;
         }
-        header h1 {
-            font-size: 1.5rem;
-        }
-        nav ul {
-            display: flex;
-            list-style-type: none;
-        }
-        nav ul li {
-            padding: 0 1rem;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        main {
-            padding: 6rem 0 3rem;
-        }
-        section {
-            padding: 3rem 0;
-        }
-        h2 {
-            color: var(--secondary-color);
+        .project {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 1rem;
             margin-bottom: 1rem;
         }
         .btn {
             display: inline-block;
-            background: var(--primary-color);
-            color: #fff;
+            background-color: #3498db;
+            color: white;
             padding: 0.5rem 1rem;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
             text-decoration: none;
-            transition: opacity 0.2s ease-in;
+            border-radius: 3px;
         }
-        .btn:hover {
-            opacity: 0.8;
-        }
-        .project {
-            background: #fff;
-            border-radius: 5px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-        .skills ul {
-            list-style-type: none;
+        .skills {
             display: flex;
             flex-wrap: wrap;
+            gap: 10px;
         }
-        .skills ul li {
-            background: var(--secondary-color);
-            color: #fff;
+        .skill {
+            background-color: #2c3e50;
+            color: white;
             padding: 0.5rem;
-            margin: 0.5rem;
-            border-radius: 5px;
+            border-radius: 3px;
         }
         footer {
-            background: var(--secondary-color);
-            color: #fff;
             text-align: center;
-            padding: 1rem 0;
-        }
-        @media (max-width: 700px) {
-            header .container {
-                flex-direction: column;
-            }
-            nav ul {
-                margin-top: 1rem;
-            }
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Ian Kleimans</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Ian Kleimans</h1>
+        <p>Industrial Engineering Student at Purdue University</p>
     </header>
 
-    <main class="container">
-        <section id="about">
+    <main>
+        <section>
             <h2>About Me</h2>
             <p>I'm a passionate Industrial Engineering student at Purdue University, with a minor in Economics. I'm dedicated to leveraging technology and data analysis to create innovative solutions.</p>
             <a href="Ian-Kleimans_Resume.pdf" class="btn" target="_blank">View Full Resume</a>
         </section>
 
-        <section id="projects">
+        <section>
             <h2>Projects</h2>
             <div class="project">
                 <h3>Compute Tracker</h3>
@@ -150,21 +83,21 @@
             </div>
         </section>
 
-        <section id="skills" class="skills">
+        <section>
             <h2>Skills</h2>
-            <ul>
-                <li>Python</li>
-                <li>HTML</li>
-                <li>JavaScript</li>
-                <li>MATLAB</li>
-                <li>AutoCAD</li>
-                <li>SQL</li>
-                <li>Data Analysis</li>
-                <li>Project Management</li>
-            </ul>
+            <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">HTML</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">MATLAB</span>
+                <span class="skill">AutoCAD</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Data Analysis</span>
+                <span class="skill">Project Management</span>
+            </div>
         </section>
 
-        <section id="experience">
+        <section>
             <h2>Experience</h2>
             <div class="project">
                 <h3>Market Research Analyst - Delta EM Advisors LTD</h3>
@@ -178,21 +111,7 @@
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Ian Kleimans. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 Ian Kleimans. All rights reserved.</p>
     </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
